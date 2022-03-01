@@ -1,0 +1,37 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'com.tngus3722'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'junit:junit:4.13.1'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// Lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	// Mapstruct
+	implementation 'org.mapstruct:mapstruct:1.4.1.Final'
+	annotationProcessor "org.mapstruct:mapstruct-processor:1.4.1.Final"
+	testImplementation 'org.mapstruct:mapstruct:1.4.1.Final'
+	testAnnotationProcessor "org.mapstruct:mapstruct-processor:1.4.1.Final"
+	// swagger
+	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	// open feign
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:2.2.9.RELEASE'
+
+}
+
+test {
+	useJUnitPlatform()
+}

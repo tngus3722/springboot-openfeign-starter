@@ -1,0 +1,11 @@
+feign:
+  hystrix:
+    enabled: true
+
+project:
+  title: open feign stater
+  version: 1.0.0
+
+token:
+  access: access_token
+  refresh: refresh_token
