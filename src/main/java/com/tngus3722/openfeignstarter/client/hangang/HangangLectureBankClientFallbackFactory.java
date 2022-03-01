@@ -3,7 +3,7 @@ package com.tngus3722.openfeignstarter.client.hangang;
 import com.tngus3722.openfeignstarter.vo.PageVO;
 import com.tngus3722.openfeignstarter.vo.lectureBank.LectureBankVO;
 import feign.FeignException;
-import org.springframework.cloud.openfeign.FallbackFactory;
+import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
 // circuit이 open된 경우 혹은 실행도중 에러가 발생한 경우에 실행된다.
